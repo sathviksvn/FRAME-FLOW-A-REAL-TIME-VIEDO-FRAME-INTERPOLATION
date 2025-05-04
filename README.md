@@ -2,9 +2,11 @@
 
 ## Overview
 
-FRAME-FLOW is a real-time video frame interpolation project designed to generate intermediate frames between two consecutive video frames. This technique is useful for applications such as improving video quality, smooth transitions in animations, and reducing motion blur. 
+**Video Frame Interpolation (VFI)** is a crucial technique in computer vision that generates intermediate frames between consecutive frames to achieve smoother motion. Traditional VFI methods often struggle with handling fast motion, complex scene dynamics, and require manual specification of the number of frames, making them inefficient for real-time applications. In this project, we propose **Frame Flow**, a deep learning-based real-time VFI model that optimizes frame generation by automating the interpolation process and reducing computational redundancy.
 
-The project includes two methods for frame interpolation: a **Fixed Depth** method and an **Adaptive Depth** method. The adaptive method dynamically adjusts the number of intermediate frames generated based on the similarity between the original frames and the interpolated ones, optimizing the video generation process.
+Our approach leverages the **IFNet architecture** within a Teacher-Student framework, enhanced with **U-Net-based refinement** for improved feature extraction and motion estimation. A key innovation of our model is its ability to dynamically determine the number of frames to generate, eliminating manual input. This is achieved by computing the structural similarity (SSIM) between consecutive frames and stopping frame generation when the similarity exceeds 0.98, ensuring adaptive and efficient interpolation.
+
+Although this introduces a slight increase in inference time, the Teacher-Student architecture of **RIFE** ensures that the student model retains a low inference time, making the added SSIM computation negligible in terms of overall performance. Experimental results show that our adaptive method achieves a 35.43% reduction in storage requirements, significantly reduces redundant frames, and enhances computational efficiency. The model achieves **SSIM** of 0.9624 and **PSNR** of 36.72 dB, indicating high-quality frame synthesis. This research has wide-ranging applications in video enhancement, slow-motion generation, animation, and high-frame-rate content creation. Furthermore, it has potential future applications in medical imaging, where frame interpolation could minimize radiation exposure by reconstructing intermediate X-ray frames, though this remains an area for further study. The findings demonstrate that **Frame Flow** is an efficient and adaptive solution for real-time VFI, particularly in resource-constrained environments.
 
 ## Project Files
 
@@ -65,19 +67,19 @@ The project includes two methods for frame interpolation: a **Fixed Depth** meth
 
 ## Requirements
 
-- Python 3.x
-- PyTorch
-- OpenCV
-- MoviePy
-- NumPy
-- Matplotlib
-- Skimage
-- psutil
-- torchvision
+To run this project, you will need the following libraries:
 
-## Installation
+- **Python 3.x**
+- **PyTorch**
+- **OpenCV**
+- **MoviePy**
+- **NumPy**
+- **Matplotlib**
+- **Scikit-Image**
+- **psutil**
+- **torchvision**
 
-Ensure you have all dependencies installed using pip:
+You can install all dependencies using pip:
 
 ```bash
 pip install torch opencv-python moviepy numpy matplotlib scikit-image psutil torchvision
