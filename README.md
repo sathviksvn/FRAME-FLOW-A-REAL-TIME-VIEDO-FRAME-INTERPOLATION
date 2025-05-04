@@ -50,11 +50,12 @@ A key innovation is the model's ability to dynamically determine the number of f
 #### **PSNR Comparison**  
 ![PSNR Comparison](psnr_comparison.png)
 
+#### **SSIM Comparison**  
+![SSIM Comparison](ssim_comparison.png)
+
 #### **Reduction & Gain Comparison**  
 ![Reduction & Gain Comparison](reduction_gain_comparison.png)
 
-#### **SSIM Comparison**  
-![SSIM Comparison](ssim_comparison.png)
 
 ## How It Works
 
