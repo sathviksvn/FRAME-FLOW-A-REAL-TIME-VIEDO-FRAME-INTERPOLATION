@@ -58,7 +58,7 @@ The project includes two methods for frame interpolation: a **Fixed Depth** meth
 
 ## How It Works
 
-1. **Model Setup**: The frame interpolation model (RIFE) is loaded and evaluated.
+1. **Model Setup**: The frame interpolation model is loaded and evaluated.
 2. **Frame Interpolation**: The `generate_interpolated_frame()` function is used to generate intermediate frames between two consecutive frames.
 3. **Adaptive vs Fixed Depth**: The Adaptive method dynamically adjusts the number of frames based on the similarity between the original frames and interpolated frames, while the Fixed Depth method generates a fixed number of frames.
 4. **Metrics Calculation**: SSIM and PSNR are used to evaluate the quality of the generated frames.
