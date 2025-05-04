@@ -8,7 +8,7 @@ A key innovation is the model's ability to dynamically determine the number of f
 
 ## Project Files
 
-- **`frame-flow.ipynb`**: Jupyter Notebook implementing the frame interpolation models and functions.
+- **`FrameFlow.ipynb`**: Jupyter Notebook implementing the frame interpolation models and functions.
 - **`baseline.mp4`**: Video output generated using the Fixed Depth interpolation method.
 - **`optimized.mp4`**: Video output generated using the Adaptive Depth interpolation method.
 - **`psnr_comparison.png`**: Bar chart comparing the average PSNR (Peak Signal-to-Noise Ratio) of both methods.
